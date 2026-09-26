@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  ⚡ NexusHost Portal
+  ⚡ ANYDASH Portal
   <br>
 </h1>
 
