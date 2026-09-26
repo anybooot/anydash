@@ -426,7 +426,7 @@ You are responsible for complying with Pterodactyl's license and the terms of se
 
 ## 💬 Support
 
-- 🐛 **Bug reports**: [SOON](https://anyboot.ct.ws/soon)
+- 🐛 **Bug reports**: [Click]([https://anyboot.ct.ws/soon](https://github.com/anybooot/anydash/issues))
 - 💡 **Feature requests**: [SOON](https://anyboot.ct.ws/soon)
 - 💬 **Community**: Join our [SOON](https://anyboot.ct.ws/soon)
 
