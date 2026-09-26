@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 /**
- * NexusHost Portal — Single File Edition v3
+ * ANYDASH Portal — Single File Edition v3
  * English UI + Fixed admin actions
  */
 
@@ -14,7 +14,7 @@ session_start();
 error_reporting(E_ALL);
 ini_set('display_errors', '0');
 
-$DB_FILE = __DIR__ . '/nexushost.db';
+$DB_FILE = __DIR__ . '/anydash.db';
 
 // ─────────────────────────────────────────────────────────────
 //  DATABASE
@@ -79,7 +79,7 @@ try {
         'max_free_per_user'=>'1', 'max_free_total'=>'100',
         'server_description'=>'Free plan — renew regularly to keep it.',
         'renew_enabled'=>'1', 'renew_days'=>'7', 'renew_bonus_days'=>'1',
-        'site_name'=>'NexusHost', 'site_logo'=>'',
+        'site_name'=>'ANYDASH', 'site_logo'=>'',
         'discord_url'=>'', 'website_url'=>'',
         'terms_url'=>'', 'privacy_url'=>'', 'cookies_url'=>'',
         'theme_default'=>'green', 'recaptcha_site_key'=>'',
@@ -536,7 +536,7 @@ if (isset($_GET['action'])) {
         $s = $db->prepare("SELECT username,email FROM users WHERE id=?");
         $s->execute([$_SESSION['user_id']]);
         $u = $s->fetch();
-        $issuer = rawurlencode(gs('site_name') ?: 'NexusHost');
+        $issuer = rawurlencode(gs('site_name') ?: 'AnyDash');
         $label = rawurlencode($issuer . ':' . $u['email']);
         $uri = "otpauth://totp/$label?secret=$secret&issuer=$issuer&algorithm=SHA1&digits=6&period=30";
         api_json(['success' => true, 'secret' => $secret, 'uri' => $uri]);
@@ -731,7 +731,7 @@ if (isset($_GET['action'])) {
 // ─────────────────────────────────────────────────────────────
 //  PAGE DATA
 // ─────────────────────────────────────────────────────────────
-$site_name = gs('site_name') ?: 'NexusHost';
+$site_name = gs('site_name') ?: 'ANYDASH';
 $site_logo = gs('site_logo') ?: '';
 $discord = gs('discord_url') ?: '';
 $website = gs('website_url') ?: '';
